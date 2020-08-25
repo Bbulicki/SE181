@@ -10,9 +10,9 @@ Project: Chess Game
 Team Members: Armaan Bhasin, Brandin Bulicki, Aparna Mishra, Tumaresi Yalikun, Briana Schuetz
 
 ------------------------------------------------------------------------------------------------------------
-Requirements:
-    @angular/cli
-        @angular-devkit
+## Requirements:
+     @angular/cli
+         @angular-devkit
     
     Python v3.8.5
         socketio
@@ -22,65 +22,65 @@ Requirements:
         aiohttp
             v3.6.2
     
-Building Game:
-    1) From Command line open ../SE181/Server
+## Building Game:
+     1. From Command line open ../SE181/Server
         Start Server:
             python GameManager.py
-    2) From Command Line open ../SE181/angular-Chess
+     2. From Command Line open ../SE181/angular-Chess
         Start Client1: (Player 1)
             ng serve --port <PORT1> --host <IPADDRESS>
-            (PORT1 => Open Port on machine) (--host <IPADDRESS> => **Not Required: Defaults to Localhost**)
-    3) From Command Line open ../SE181/angular-Chess
+            (PORT1 => Open Port on machine) (--host <IPADDRESS> => Not Required: Defaults to Localhost)
+     3. From Command Line open ../SE181/angular-Chess
         Start Client2: (Player 2)
             ng serve --port <PORT2> --host <IPADDRESS>
-            (PORT1 => Open Port on machine) (--host <IPADDRESS> => **Not Required: Defaults to Localhost**)
-    4) Open Player 1:
+            (PORT1 => Open Port on machine) (--host <IPADDRESS> => Not Required: Defaults to Localhost)
+     4. Open Player 1:
         Navigate to <IPADDRESS>:<PORT1>
-    5) Open Player 2:
+     5. Open Player 2:
         Navigate to <IPADDRESS>:<PORT2>
-    6) Play Chess
+     6. Play Chess
 
 ------------------------------------------------------------------------------------------------------------
-Release Notes:
+## Release Notes:
 
-1.0.0 Initial Version with Board Specifications
-    1.0.1 Board Format was updated.
-    1.0.2 Function descriptions and specifications were added.
-    1.0.3 Move validation for each chess piece was completed.
-1.1.0 Event and Moves Handling
-    1.1.1 Found attacks for a given piece.
-    1.1.2 Check/Checkmate events are handled. 
-	1.1.3 Moves for each chess piece were completed.
-1.2.0 Bug Fixes for Events
-    1.2.1 Ensured that the king was capable of moving out of check.
-    1.2.2 Bugs under the checkmate feature were fixed.
-1.3.0 Chess Board Visualization
-    1.3.1 Functionality to Flip Board was added.
-    1.3.2 Reformatted the chess board visualization for the back-end. 
-1.4.0 Bug fixes for Piece Movements
-	1.4.1 Bishop’s movement was fixed.
-    1.4.2 Fixed the pawn’s attack moves.
-1.5.0 User Interface Initialization
-    1.5.1 Board and Chess Piece Initialization
-    1.5.2 Initialization of Socket
-1.6.0 Bug fixes for Socket Communication
-	1.6.1 Corrected Socket Message Communication Between Client and Server
-	1.6.2 Fixed duplicate attributes for screen and player.
-1.7.0 Pop Up and Viewpoint Creation
-	1.7.1 Creation of notification pop ups.
-	1.7.2 Creation of a Second Viewpoint for each player
-1.8.0 Re-Design Chess Board
-	1.8.1 Locked Player from taking opponent’s turn
-	1.8.2 Reformatted the chess board visualization for the front-end. 	
-1.9.0 Bug Fixes for Pawn Promotion & Castling
-	1.9.1 Corrected Handling of Pawn Promotion on the UI
-	1.9.2 Fixed rook’s move when castling.
-2.0.0 Course Submission Version
-    2.0.1  Added New Game Button for continuous play
+#### 1.0.0 Initial Version with Board Specifications
+     - 1.0.1 Board Format was updated.
+     - 1.0.2 Function descriptions and specifications were added.
+     - 1.0.3 Move validation for each chess piece was completed.
+#### 1.1.0 Event and Moves Handling
+     - 1.1.1 Found attacks for a given piece.
+     - 1.1.2 Check/Checkmate events are handled. 
+     - 1.1.3 Moves for each chess piece were completed.
+#### 1.2.0 Bug Fixes for Events
+     - 1.2.1 Ensured that the king was capable of moving out of check.
+     - 1.2.2 Bugs under the checkmate feature were fixed.
+#### 1.3.0 Chess Board Visualization
+     - 1.3.1 Functionality to Flip Board was added.
+     - 1.3.2 Reformatted the chess board visualization for the back-end. 
+#### 1.4.0 Bug fixes for Piece Movements
+     - 1.4.1 Bishop’s movement was fixed.
+     - 1.4.2 Fixed the pawn’s attack moves.
+#### 1.5.0 User Interface Initialization
+     - 1.5.1 Board and Chess Piece Initialization
+     - 1.5.2 Initialization of Socket
+#### 1.6.0 Bug fixes for Socket Communication
+     - 1.6.1 Corrected Socket Message Communication Between Client and Server
+     - 1.6.2 Fixed duplicate attributes for screen and player.
+#### 1.7.0 Pop Up and Viewpoint Creation
+     - 1.7.1 Creation of notification pop ups.
+     - 1.7.2 Creation of a Second Viewpoint for each player
+#### 1.8.0 Re-Design Chess Board
+     - 1.8.1 Locked Player from taking opponent’s turn
+     - 1.8.2 Reformatted the chess board visualization for the front-end. 	
+#### 1.9.0 Bug Fixes for Pawn Promotion & Castling
+     - 1.9.1 Corrected Handling of Pawn Promotion on the UI
+     - 1.9.2 Fixed rook’s move when castling.
+#### 2.0.0 Course Submission Version
+     - 2.0.1  Added New Game Button for continuous play
 
 ------------------------------------------------------------------------------------------------------------
 
-Functionalities:
+## Functionalities:
 
     - Board and Chess Piece Initialization:
         The chess game displays a chess board with 64 unique squares, 8 unique rows (with 8 squares each), and 8 unique columns with 8 squares each. Each player has 8 pawns, 2 rooks, 2 knights, 2 bishops, 1 king and 1 queen.
@@ -104,7 +104,7 @@ Functionalities:
         The game recognizes when a player is in checkmate, checkmate notification pops up, the winner is announced and the game ends.
 
 ------------------------------------------------------------------------------------------------------------
-Functionalities that have not been implemented for this chess game :
+## Functionalities that have not been implemented for this chess game :
 
     - Move Timer Enforcement :
         Appearance of a time limit notification and the passing of current turn to the opponent.
@@ -125,7 +125,7 @@ Functionalities that have not been implemented for this chess game :
         Recognition of the threefold repetition where the player continues to repeat the same move as other moves puts them at a disadvantage; appearance of a draw notification. 
 
 ------------------------------------------------------------------------------------------------------------
-Known Bugs:	
+## Known Bugs:	
     Removing Player from Server Not Properly Implemented
         Severity Level: 3
         Reasoning: If a player breaks their connection to the server, the server must be restarted before another match can begin
