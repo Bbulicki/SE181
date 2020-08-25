@@ -1,0 +1,20 @@
+<h1 mat-dialog-title>Pawn Promotion</h1>
+
+<form [formGroup]="promotionForm" (ngSubmit)="closeDialog()">
+<mat-dialog-content>
+    <label id="example-radio-group-label">Pick your piece:</label>
+  <!-- <mat-form-field class="full-width" appearance="outline"> -->
+    <mat-radio-group aria-labelledby="example-radio-group-label" 
+        class="example-radio-group" [(ngModel)]="promotionSelection" formControlName="promotion">
+        <mat-radio-button class="example-radio-button" *ngFor="let option of promotionOptions" [value]="option">
+            {{option}}
+        </mat-radio-button>
+    </mat-radio-group>
+  <!-- </mat-form-field> -->
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <!-- <button mat-raised-button mat-dialog-close>Cancel</button> -->
+  <button mat-raised-button type="submit" [disabled]="!promotionForm.valid" color="primary">OK</button>
+</mat-dialog-actions>
+</form>

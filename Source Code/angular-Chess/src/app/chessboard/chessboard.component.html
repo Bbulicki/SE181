@@ -1,0 +1,50 @@
+<link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald" rel="stylesheet">
+<!-- <button (click)="testUpdateBoard()">test test test</button> -->
+<div class="row">
+    <div class="col left">
+        <h1 style="text-align: center; margin-top: 20%;">CHESS</h1>
+        <hr>
+        <h3 style="margin-top: 7%;">Group 19</h3>
+        <p>Version 2.0.0</p>
+    </div>
+    <div class="col middle">
+        <table cellspacing="0" cellpadding="0">
+            <tr>
+                <th colspan="10" class="element">Opponent: {{ChessBoard.opposingUser}}</th>
+            </tr>
+            <tr>
+                <th class="element table-axis"></th>
+                <th *ngFor="let c of Columns" class="element table-axis">{{c}}</th>
+                <th class="element table-axis"></th>
+            </tr>
+            <tr *ngFor="let r of Rows, let i = index">
+                <th class="element table-axis">{{8-i}}</th>
+                <td *ngFor="let c of Columns, let j = index" 
+                [style.background]="ChessBoard.BoardMatrix[7-i][j].oddSquare ? '#FECE9E' : '#D18B46'"
+                [style.border]="(ChessBoard.isWhitePlayer ? ChessBoard.BoardMatrix[i][j].isSelected : ChessBoard.BoardMatrix[7-i][7-j].isSelected) ? '2px solid red' : '2px solid transparent'" >
+                <img 
+                    [src]="ChessBoard.isWhitePlayer ? getIcon(ChessBoard.BoardMatrix[i][j].piece) : getIcon(ChessBoard.BoardMatrix[7-i][7-j].piece)" 
+                    (click)="selectSquare(ChessBoard.isWhitePlayer ? ChessBoard.BoardMatrix[i][j] : ChessBoard.BoardMatrix[7-i][7-j])" 
+                        class="element"
+                        style="cursor: pointer;">
+                </td>
+                <th class="element table-axis" class="element table-axis">{{8-i}}</th>
+            </tr>
+            <tr>
+                <th class="element table-axis"></th>
+                <th *ngFor="let c of Columns" class="element table-axis">{{c}}</th>
+                <th class="element table-axis"></th>
+            </tr>
+            <tr>
+                <th colspan="10" class="element">You: {{ChessBoard.localUser}}</th>
+            </tr>
+        </table>
+    </div>
+    <div class="col right" style="text-align: center;">
+        <button (click)="startGame()" class="button">Start New Game</button>
+        <h3>Player Turn: {{ChessBoard.displayTurn}} </h3>
+    </div>
+</div>
+
+
+
